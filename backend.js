@@ -7,14 +7,16 @@ let firstConnection = true;
 const server = net.createServer((socket) => {
     if (firstConnection){
         console.log(
-        `[+] New TCP connection established on backned node (Port ${port})`,
+        `[+] New TCP connection established on backend node (Port ${port})`,
         );
         firstConnection = false;
     }
 
   socket.on("error", (err) => {
-    if (err.code !== "ECONNRESET") {
+    if (err.code === "ECONNRESET") {
       console.error(`[!] Socket error: ${err.message}`);
+    } else {
+      console.error(`[!] Backend server error on port ${port}: ${err.message}`);
     }
   });
 
