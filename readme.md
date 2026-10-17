@@ -3,15 +3,17 @@
 A lightweight, high-performance Layer 4 (Transport Layer) load balancer built from scratch using Node.js, paired with an automated Bash-based system watchdog daemon. This project demonstrates core Site Reliability Engineering (SRE) principles, network routing, and system resilience.
 
 ## 🚀 Features
-* **Layer 4 Routing:** Direct TCP packet forwarding and stream piping using Node's native `net` module.
-* **Round-Robin Algorithm:** Evenly distributes incoming connections across a pool of active backend servers.
-* **Graceful Error Handling:** Catches socket disconnects (`ECONNRESET`) to prevent application crashes during packet drops.
-* **SRE Watchdog Daemon:** A Bash script that continuously monitors backend nodes and automatically restarts them upon failure (Self-Healing).
+
+- **Layer 4 Routing:** Direct TCP packet forwarding and stream piping using Node's native `net` module.
+- **Round-Robin Algorithm:** Evenly distributes incoming connections across a pool of active backend servers.
+- **Graceful Error Handling:** Catches socket disconnects (`ECONNRESET`) to prevent application crashes during packet drops.
+- **SRE Watchdog Daemon:** A Bash script that continuously monitors backend nodes and automatically restarts them upon failure (Self-Healing).
 
 ## 🛠️ Tech Stack
-* **JavaScript / Node.js** (Core routing engine, TCP socket manipulation)
-* **Bash** (System orchestration, automated remediation)
-* **Linux / Netcat** (Process monitoring and socket testing)
+
+- **JavaScript / Node.js** (Core routing engine, TCP socket manipulation)
+- **Bash** (System orchestration, automated remediation)
+- **Linux / Netcat** (Process monitoring and socket testing)
 
 ## ⚙️ Quick Start
 
