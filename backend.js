@@ -13,10 +13,8 @@ const server = net.createServer((socket) => {
     }
 
   socket.on("error", (err) => {
-    if (err.code === "ECONNRESET") {
+    if (err.code !== "ECONNRESET") {
       console.error(`[!] Socket error: ${err.message}`);
-    } else {
-      console.error(`[!] Backend server error on port ${port}: ${err.message}`);
     }
   });
 
